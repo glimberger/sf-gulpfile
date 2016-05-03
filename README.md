@@ -69,6 +69,8 @@ Fill the bundles field by targeting its public folder.
 
 ## Usage
 
+Run the following commands from the `fs-gulpfile` directory.
+
 ```sh
 $ gulp
 ```
