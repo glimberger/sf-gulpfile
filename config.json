@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "bundles": [
+  ],
+  "sass": {
+    "src": "scss/*.scss",
+    "dest": "css",
+    "watch": [
+      "scss/**/*.scss"
+    ]
+  },
+  "fonts": {
+    "src": "fonts/*.@(otf|eot|svg|ttf|woff|woff2)",
+    "vendor": [
+      "web/vendor/font-awesome/fonts/*.@(otf|eot|svg|ttf|woff|woff2)",
+      "web/vendor/octicons/octicons/*.@(otf|eot|svg|ttf|woff|woff2)",
+      "web/bundles/ifaprague/fonts/*.@(otf|eot|svg|ttf|woff|wooff2)"
+    ],
+    "dest": "web/fonts"
+  },
+  "images": {
+    "src": "images/*",
+    "vendor": [
+      "web/vendor/jquery-ui/themes/smoothness/images/*"
+    ],
+    "dest": "web/images"
+  },
+  "cmd": {
+    "php": "php",
+    "console": "app/console"
+  },
+  "cwd": ".."
+}
