@@ -1,23 +1,29 @@
 # SF-Gulpfile - Gulpfile for Symfony projects
 
 This is an implementation for Symfony projects of [Gulp](http://gulpjs.com/) the well-named task runner, build upon [Node.js](https://nodejs.org/en/).
-A  pre-configured `gulpfile.js` is provided (this is mandatory for Gulp), along with the package definitions for NPM. 
-Also a template `gulpconfig.json` that contains all asset and pattern declarations is provided.
 
-The AsseticBundle needs to be installed in your project
+A  pre-configured `gulpfile.js` is provided (this is mandatory for Gulp), along with the package definitions for NPM.
+ 
+Also a template `gulpconfig.json` is provided, that contains all asset and pattern declarations.
+
+The AsseticBundle needs to be installed in your project : 
+
 [Install Assetic](http://symfony.com/doc/current/cookbook/assetic/asset_management.html#installing-and-enabling-assetic)
+
 [Basic configuration](#assetic-configuration)
 
 
 ## Installation
 
+Place yourself at the root of your project.
+
 #### Install Node.js: 
 
-* [Download for Windows](https://nodejs.org/en/download/package-manager/#windows)
+[Download for Windows](https://nodejs.org/en/download/package-manager/#windows)
 
-* [Download for OSX](https://nodejs.org/en/download/package-manager/#osx)
+[Download for OSX](https://nodejs.org/en/download/package-manager/#osx)
 
-Test: run `node -v` . The version should be higher than 5.6.0
+Test: Run `node -v` . The version should be higher than 5.6.0.
 
 
 #### Update NPM (Node Package Manager):
@@ -28,49 +34,57 @@ Node comes with npm installed so you should have a version of npm. However, npm 
 $ npm install npm -g
 ```
 
-Test: run `npm -v` . The version should be higher than 3.8.8
+Test: Run `npm -v` . The version should be higher than 3.8.8.
 
 
-#### Clone files from repository
+#### Clone the repository
 
-Files have to be cloned at the root of your project.
-
-Note: To clone a single file on Github, we need `svn` to operate. Mac OSX has a pre-installed version.
-
-Clone `gulpfile.js`:
 ```sh
-$ svn export https://github.com/glimberger/sf-gulpfile.git/trunk/src/gulpfile.js
-```
-
-Clone `package.json`:
-```sh
-$ svn export https://github.com/glimberger/sf-gulpfile.git/trunk/src/package.json
-```
-
-Clone the template `gulpconfig.json`:
-```sh
-$ svn export https://github.com/glimberger/sf-gulpfile.git/trunk/src/gulpconfig.json
+$ git clone https://github.com/glimberger/sf-gulpfile.git
 ```
 
 
 #### Install gulp:
 
 ```sh
-$ npm install --global gulp-cli
+$ npm install -g gulp-cli
 ```
 
 
 #### Install packages
+
 ```sh
 $ npm install
 ```
 
+#### Setup config.json
+
+Fill the bundles field by targeting its public folder.
+```json
+"bundles": [
+    "Acme/YourBundle/path/to/the/public/folder",
+    "Acme/YourOtherBundle/path/to/the/public/folder"
+  ],
+```
 
 ## Usage
 
-```
+```sh
 $ gulp
 ```
+will process scss files, copy images & fonts from bundles to the `web` folder, and then run `assetic dump` command.
+
+
+```sh
+$ gulp:prod
+```
+will process & compress scss files, copy images & fonts from bundles to the `web` folder, and then run `assetic dump` command.
+
+
+```sh
+$ gulp -T
+```
+will display the task dependency tree for the loaded gulpfile.
 
 
 ## Extras
@@ -91,18 +105,9 @@ assetic:
 
 #### Bower to manage front-end libraries
 
+Inside the extras folder you can an example of Bower configuration
 Bower is a front-end package manager.
-Files need to be copied at the root of your project
-
-Clone bower runcom file:
-```sh
-$ svn export https://github.com/glimberger/sf-gulpfile.git/trunk/extras/.bowerrc
-```
-
-Clone bower config file:
-```sh
-$ svn export https://github.com/glimberger/sf-gulpfile.git/trunk/extras/bower.json
-```
+Files need to be copied at the root of your project.
 
 Install bower:
 ```sh
