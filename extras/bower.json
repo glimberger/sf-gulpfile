@@ -1,0 +1,22 @@
+{
+  "name": "your/project",
+  "version": "1.0.0",
+  "authors": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "web/assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.6.1",
+    "bootstrap": "v4.0.0-alpha.2",
+    "jquery-ui": "^1.11.4",
+    "bootstrap-multiselect": "^0.9.13",
+    "octicons": "*",
+    "tether": "^1.3.2"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "components": {
+    "composer": "./composer.json",
+    "node": "./package.json",
+    "bower": "./bower.json",
+    "gulp": "./gulpconfig.json"
+  },
+  "publics": [
+    "./src/Ifa/Bundle/PragueBundle/Resources/public/",
+    "./src/Ifa/Bundle/PragueUserBundle/Resources/public/"
+  ],
+  "sass": {
+    "src": "scss/*.scss",
+    "dest": "css",
+    "watch": [
+      "scss/**/*.scss"
+    ]
+  },
+  "fonts": {
+    "src": "fonts/*.@(otf|eot|svg|ttf|woff|woff2)",
+    "vendor": [
+      "./web/vendor/font-awesome/fonts/*.@(otf|eot|svg|ttf|woff|woff2)",
+      "./web/vendor/octicons/octicons/*.@(otf|eot|svg|ttf|woff|woff2)",
+      "./web/bundles/ifaprague/fonts/*.@(otf|eot|svg|ttf|woff|wooff2)"
+    ],
+    "dest": "./web/fonts"
+  },
+  "images": {
+    "src": "images/*",
+    "vendor": [
+      "./web/vendor/jquery-ui/themes/base/images/*"
+    ],
+    "dest": "./web/images"
+  },
+  "commands": {
+    "assets_install": "php app/console assets:install",
+    "assetic_dump": "php app/console assetic:dump"
+  }
+}
