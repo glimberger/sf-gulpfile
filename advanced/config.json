@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "components": {
+    "composer": "./composer.json",
+    "node": "./package.json",
+    "bower": "./bower.json",
+    "gulp": "./gulpconfig.json"
+  },
+  "paths": {
+    "sass": {
+      "src": [
+        "./web/bundles/ifaprague/scss/screen.scss",
+        "./web/bundles/ifaprague/scss/print.scss"
+      ],
+      "dest": "./web/css",
+      "watch": [
+        "./src/**/Resources/public/scss/**/*.scss"
+      ]
+    },
+    "js": {
+      "src": "./web/bundles/*/js/*.js",
+      "dest": "./web/js",
+      "vendor": [
+        ""
+      ],
+      "watch": [
+        "./src/**/Resources/public/js/**/*.js"
+      ]
+    },
+    "fonts": {
+      "src": [
+        ""
+      ],
+      "dest": "./web/fonts"
+    },
+    "images": {
+      "src": [
+        ""
+      ],
+      "dest": "./web/images"
+    }
+  },
+  "commands": {
+    "assets_install": "php app/console assets:install"
+  }
+}
