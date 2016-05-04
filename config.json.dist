@@ -9,6 +9,11 @@
       "scss/**/*.scss"
     ]
   },
+  "js": {
+    "src": "js/**/*.js",
+    "dest": "web/js",
+    "watch": "js/**/*.js"
+  },
   "fonts": {
     "src": "fonts/*.@(otf|eot|svg|ttf|woff|woff2)",
     "vendor": [

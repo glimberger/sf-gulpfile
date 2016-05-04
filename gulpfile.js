@@ -1,6 +1,6 @@
 'use strict';
 
-var cfg = require('./config.json'), // config file
+var cfg = require('./config.json.dist'), // config file
     exec = require('child_process').exec;
 
 // get working directory from config
@@ -150,7 +150,10 @@ gulp.task('watch', function () {
     var root = getWorkingDir();
     var globs = [];
     for (var i in cfg.bundles) {
+        // scss files
         globs.push(root + '/' + cfg.bundles[i] + cfg.sass.watch);
+        // js files
+        globs.push(root + '/' + cfg.bundles[i] + cfg.js.watch)
     }
     gulp
         .watch(globs, ['styles:dev'])
