@@ -2,9 +2,10 @@
 
 This is an implementation for Symfony projects of [Gulp](http://gulpjs.com/) the well-named task runner, build upon [Node.js](https://nodejs.org/en/).
 
+It means to combine the utility of Assetic and the power of scss processor.
+
 A  pre-configured `gulpfile.js` is provided (this is mandatory for Gulp), along with the package definitions for NPM.
- 
-Also a template `gulpconfig.json` is provided, that contains all asset and pattern declarations.
+Also a template `config.json` is provided, that contains all asset and pattern declarations.
 
 The AsseticBundle needs to be installed in your project : 
 
@@ -57,9 +58,17 @@ $ npm install -g gulp-cli
 $ npm install
 ```
 
+
 #### Setup config.json
 
-Fill the bundles field by targeting its public folder.
+Create the file from the template:
+
+```sh
+$ cp config.json.dist config.json
+```
+
+Fill the `bundles` field by targeting its public folder:
+
 ```json
 "bundles": [
     "Acme/YourBundle/path/to/the/public/folder",
