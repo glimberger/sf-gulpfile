@@ -94,6 +94,11 @@ $ gulp:prod
 ```
 will process & compress scss files, copy images & fonts from bundles to the `web` folder, and then run `assetic dump` command.
 
+```sh
+$ gulp:watch
+```
+will watch for changes in directories declared in the config file (i.e. scss files).
+
 
 ```sh
 $ gulp -T
