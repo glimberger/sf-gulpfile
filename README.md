@@ -5,9 +5,9 @@ This is an implementation for Symfony projects of [Gulp](http://gulpjs.com/) the
 It means to combine the utility of Assetic and the power of scss processor.
 
 A  pre-configured `gulpfile.js` is provided (this is mandatory for Gulp), along with the package definitions for NPM.
-Also a template `config.json` is provided, that contains all asset and pattern declarations.
+Also a template `config.json`, containing all asset and pattern declarations, is provided.
 
-The AsseticBundle needs to be installed in your project : 
+The AsseticBundle should be installed in your project : 
 
 [Install Assetic](http://symfony.com/doc/current/cookbook/assetic/asset_management.html#installing-and-enabling-assetic)
 
@@ -45,16 +45,18 @@ $ git clone https://github.com/glimberger/sf-gulpfile.git
 ```
 
 
-#### Install gulp:
+#### Install gulp CLI globally:
 
 ```sh
 $ npm install -g gulp-cli
 ```
 
 
+
 #### Install packages
 
 ```sh
+# to be run from within the 'sf-gulpfile' folder
 $ npm install
 ```
 
@@ -64,10 +66,11 @@ $ npm install
 Create the file from the template:
 
 ```sh
+# to be run from within the 'sf-gulpfile' folder
 $ cp config.json.dist config.json
 ```
 
-Fill the `bundles` field by targeting its public folder:
+Fill the `bundles` field by targeting you bundles public folder:
 
 ```json
 "bundles": [
@@ -78,7 +81,7 @@ Fill the `bundles` field by targeting its public folder:
 
 ## Usage
 
-Run the following commands from the `fs-gulpfile` directory.
+Run the following commands from the `sf-gulpfile` directory.
 
 ```sh
 $ gulp

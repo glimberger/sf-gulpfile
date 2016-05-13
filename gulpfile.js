@@ -36,7 +36,7 @@ gulp.task('styles:dev', function () {
 });
 gulp.task('sass:dev', function () {
     var options = { cwd: getWorkingDir() };
-    for (var i in cfg.bundles) {
+    for (var i in cfg.bundles) { // iterate over the declared bundles
         var source = cfg.bundles[i] + cfg.sass.src,
             dest   = cfg.bundles[i] + cfg.sass.dest;
 
@@ -61,7 +61,7 @@ gulp.task('styles:prod', function () {
 });
 gulp.task('sass:prod', function () {
     var options = { cwd: getWorkingDir() };
-    for (var i in cfg.bundles) {
+    for (var i in cfg.bundles) { // iterate over the declared bundles
         var source = cfg.bundles[i] + cfg.sass.src,
             dest   = cfg.bundles[i] + cfg.sass.dest;
 
@@ -83,7 +83,7 @@ gulp.task('sass:prod', function () {
 gulp.task('fonts', function () {
     var options = { cwd: getWorkingDir() };
     var sources = [];
-    for (var i in cfg.bundles) {
+    for (var i in cfg.bundles) { // iterate over the declared bundles
         sources.push(cfg.bundles[i] + cfg.fonts.src);
     }
     sources = sources.concat(cfg.fonts.vendor);
@@ -99,7 +99,7 @@ gulp.task('fonts', function () {
 gulp.task('images', function () {
     var options = { cwd: getWorkingDir() };
     var sources = [];
-    for (var i in cfg.bundles) {
+    for (var i in cfg.bundles) { // iterate over the declared bundles
         sources.push(cfg.bundles[i] + cfg.images.src);
     }
     sources = sources.concat(cfg.images.vendor);
@@ -149,7 +149,7 @@ gulp.task('assetic:dump', function (cb) {
 gulp.task('watch', function () {
     var root = getWorkingDir();
     var globs = [];
-    for (var i in cfg.bundles) {
+    for (var i in cfg.bundles) { // iterate over the declared bundles
         // scss files
         globs.push(root + '/' + cfg.bundles[i] + cfg.sass.watch);
         // js files
