@@ -11,7 +11,9 @@ function getWorkingDir() {
 }
 
 
-// gulp plugins
+// --------------
+//  GULP PLUGINS
+// --------------
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
@@ -20,7 +22,9 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence');
 
 
-// gulp tasks
+// ------------
+//  GULP TASKS
+// ------------
 /**
  * [dev] convert scss to css with sourcemap.
  * Usage:
