@@ -1,4 +1,4 @@
-# SF-Gulpfile - Gulpfile for Symfony projects
+# sf-gulpfile - Essential gulp tasks for Symfony projects
 
 This is an implementation for Symfony projects of [Gulp](http://gulpjs.com/) the well-named task runner, build upon [Node.js](https://nodejs.org/en/).
 
