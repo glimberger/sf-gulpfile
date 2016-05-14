@@ -1,6 +1,6 @@
 'use strict';
 
-var cfg = require('./config.json.dist'), // config file
+var cfg = require('./config.json'), // config file
     exec = require('child_process').exec;
 
 // get working directory from config
