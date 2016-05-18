@@ -44,6 +44,8 @@ Test: Run `npm -v` . The version should be higher than 3.8.8.
 $ git clone https://github.com/glimberger/sf-gulpfile.git
 ```
 
+If you have a previous version of `sf-gulpfile` installed in your project, you should save a copy of the `config.json` file, then remove the `f-gulpfile` directory, clone the repository, and finally drag the `config.json` to its original place.
+
 
 #### Install gulp CLI globally:
 
@@ -62,6 +64,8 @@ $ npm install
 
 
 #### Setup config.json
+
+If you've already got a configured `config.json` you're good. Othewise you should
 
 Create the file from the template:
 
