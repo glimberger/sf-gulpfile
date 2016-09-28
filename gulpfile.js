@@ -186,7 +186,7 @@ gulp.task('npm:update', function (cb) {
  */
 gulp.task('bower:install', function (cb) {
     var options = { cwd: getWorkingDir() };
-    var command = 'bower install';
+    var command = 'bower install --allow-root';
     exec(command, options, function (err, stdout, stderr) {
         gutil.log('stdout: ' + stdout);
         gutil.log('stderr: ' + stderr);
@@ -202,7 +202,7 @@ gulp.task('bower:install', function (cb) {
  */
 gulp.task('bower:update', function (cb) {
     var options = { cwd: getWorkingDir() };
-    var command = 'bower update';
+    var command = 'bower update --allow-root';
     exec(command, options, function (err, stdout, stderr) {
         gutil.log('stdout: ' + stdout);
         gutil.log('stderr: ' + stderr);
