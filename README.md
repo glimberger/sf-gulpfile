@@ -24,7 +24,11 @@ Place yourself at the root of your project.
 
 [Download for OSX](https://nodejs.org/en/download/package-manager/#osx)
 
-Test: Run `node -v` . The version should be higher than 5.6.0.
+Test: Run `node -v` . A version number should be returned.
+
+This library has been tested using the 5.6.0 version. 
+
+Use node.js versions prior to 5.6.0 at your own risk.  
 
 
 #### Update NPM (Node Package Manager):
@@ -35,7 +39,9 @@ Node comes with npm installed so you should have a version of npm. However, npm 
 $ npm install npm -g
 ```
 
-Test: Run `npm -v` . The version should be higher than 3.8.8.
+Test: Run `npm -v` . A version number should be returned.
+
+This library has been tested using the 3.8.8 version.
 
 
 #### Clone the repository
@@ -124,7 +130,7 @@ assetic:
 
 #### Bower to manage front-end libraries
 
-Inside the extras folder you can an example of Bower configuration
+Inside the extras folder you can find an example of Bower configuration.
 Bower is a front-end package manager.
 Files need to be copied at the root of your project.
 
@@ -135,7 +141,12 @@ $ npm install -g bower
 
 Install packages:
 ```sh
-$ bower install
+$ gulp bower:install
 ```
 
 This command install a `vendor` directory in `web`.
+
+```sh
+$ gulp bower:update
+```
+will update bower packages.
