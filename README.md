@@ -1,5 +1,8 @@
 # sf-gulpfile - Essential gulp tasks for Symfony projects
 
+> Disclaimer: If you update node to 7.0.0+, please do install sf-gulpfile v1.1.0+.
+> You should upgrade npm to v4, node 7.0.0 ships 3.10.8 by default so make sure to run `npm i -g npm@4`.
+
 This is an implementation for Symfony projects of [Gulp](http://gulpjs.com/) the well-named task runner, build upon [Node.js](https://nodejs.org/en/).
 
 It means to combine the utility of Assetic and the power of scss processor.
@@ -50,6 +53,8 @@ This library has been tested using the 3.8.8 version.
 $ git clone https://github.com/glimberger/sf-gulpfile.git
 ```
 
+If you have a previous version of `sf-gulpfile` installed in your project, you should save a copy of the `config.json` file, then remove the `f-gulpfile` directory, clone the repository, and finally drag the `config.json` to its original place.
+
 
 #### Install gulp CLI globally:
 
@@ -68,6 +73,8 @@ $ npm install
 
 
 #### Setup config.json
+
+If you've already got a configured `config.json` you're good. Othewise you should
 
 Create the file from the template:
 
