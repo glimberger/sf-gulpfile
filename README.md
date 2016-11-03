@@ -1,5 +1,8 @@
 # sf-gulpfile - Essential gulp tasks for Symfony projects
 
+> Disclaimer: If you update node to 7.0.0+, please do install sf-gulpfile v1.1.0+.
+> You should upgrade npm to v4, node 7.0.0 ships 3.10.8 by default so make sure to run `npm i -g npm@4`.
+
 This is an implementation for Symfony projects of [Gulp](http://gulpjs.com/) the well-named task runner, build upon [Node.js](https://nodejs.org/en/).
 
 It means to combine the utility of Assetic and the power of scss processor.
