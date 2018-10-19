@@ -1,6 +1,6 @@
 {
   "name": "sf-gulpfile",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Essential Gulp tasks for Symfony projects.",
   "main": "gulpfile.js",
   "devDependencies": {
