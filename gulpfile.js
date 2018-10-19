@@ -15,7 +15,8 @@ function getWorkingDir() {
 //  GULP PLUGINS
 // --------------
 var gulp = require('gulp'),
-    gutil = require('gulp-util'),
+    c = require('ansi-colors'),
+    log = require('fancy-log'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     cleanCSS = require('gulp-clean-css'),
@@ -119,7 +120,7 @@ gulp.task('images', function () {
 gulp.task('assets:install', function (cb) {
     var root = getWorkingDir();
     var command = [cfg.cmd.php, root +'/' + cfg.cmd.console, 'assets:install', root +'/web'].join(' ');
-    gutil.log(command);
+    log(command);
     exec(command, function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
@@ -136,8 +137,8 @@ gulp.task('assetic:dump', function (cb) {
     var root = getWorkingDir();
     var command = [cfg.cmd.php, root +'/' + cfg.cmd.console, 'assetic:dump'].join(' ');
     exec(command, function (err, stdout, stderr) {
-        gutil.log('stdout: ' + stdout);
-        gutil.log('stderr: ' + stderr);
+        log('stdout: ' + stdout);
+        log('stderr: ' + stderr);
         if (err !== null) {
             console.log('exec error: ' + err);
         }
@@ -162,7 +163,7 @@ gulp.task('watch', function () {
     gulp
         .watch(globs, ['styles:dev'])
         .on('change', function(event) {
-            gutil.log('File', gutil.colors.cyan(event.path), 'was', gutil.colors.yellow(event.type), ', running tasks...');
+            log('File', c.cyan(event.path), 'was', c.yellow(event.type), ', running tasks...');
         });
 });
 
@@ -172,8 +173,8 @@ gulp.task('watch', function () {
 gulp.task('npm:update', function (cb) {
     var command = 'npm update';
     exec(command, function (err, stdout, stderr) {
-        gutil.log('stdout: ' + stdout);
-        gutil.log('stderr: ' + stderr);
+        log('stdout: ' + stdout);
+        log('stderr: ' + stderr);
         if (err !== null) {
             console.log('exec error: ' + err);
         }
@@ -188,8 +189,8 @@ gulp.task('bower:install', function (cb) {
     var options = { cwd: getWorkingDir() };
     var command = 'bower install --allow-root';
     exec(command, options, function (err, stdout, stderr) {
-        gutil.log('stdout: ' + stdout);
-        gutil.log('stderr: ' + stderr);
+        log('stdout: ' + stdout);
+        log('stderr: ' + stderr);
         if (err !== null) {
             console.log('exec error: ' + err);
         }
@@ -204,8 +205,8 @@ gulp.task('bower:update', function (cb) {
     var options = { cwd: getWorkingDir() };
     var command = 'bower update --allow-root';
     exec(command, options, function (err, stdout, stderr) {
-        gutil.log('stdout: ' + stdout);
-        gutil.log('stderr: ' + stderr);
+        log('stdout: ' + stdout);
+        log('stderr: ' + stderr);
         if (err !== null) {
             console.log('exec error: ' + err);
         }
